@@ -12,7 +12,11 @@
     <artifactId>backend_parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>backend_parent</name>
+    <packaging>pom</packaging>
     <description>Meetingfilm的后端运维系统</description>
+    <modules>
+        <module>backend_common</module>
+    </modules>
 
     <!--    测试-->
     <properties>
