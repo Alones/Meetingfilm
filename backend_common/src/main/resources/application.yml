@@ -1,1 +1,18 @@
+mybatis-plus:
+  mapper-locations: classpath*:com/mooc/meetingfilm/**/xml/*Mapper.xml
+  global-config:
+    id-type: 0  #0:数据库ID自增   1:用户输入id  2:全局唯一id(IdWorker)  3:全局唯一ID(uuid)
+    db-column-underline: false
+    refresh-mapper: true
 
+#Mysql8.0.20需要加时区?serverTimezone=GMT%2B8
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/imooc?serverTimezone=GMT%2B8
+    username: root
+    password: root
+    filters: log4j,wall,mergeStat
+
+
+logging:
+  config: classpath:logback.xml
